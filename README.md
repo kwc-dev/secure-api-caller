@@ -38,7 +38,7 @@ This project serves as a reference implementation for building cloud‑ready, se
 
 | Name        | Value                                  |
 |--------------|------------------------------------------|
-| `api-token-kwc `| `your-test-token-here-kw-cheung`|
+| `api-token-kwc `| `your-secret-token-here-kw-cheung`|
 
 ## ▶️ Running the Project
 1. Start the application:
@@ -50,3 +50,18 @@ dotnet run
 GET https://localhost:7140/call-webhook
 ```
 3. Check webhook.site to see the incoming request.
+
+## 🔍 What to verify on webhook.site
+1. **JSON body**  
+You should see the payload that the `WebhookApiClient` sends, for example:
+```json
+{
+  "message": "Hello from .NET"
+}
+```
+2. **Authorization header**  
+Under the **Headers** section, verify that the request contains:
+```
+Authorization: Bearer <your-secret-token>
+```
+This confirms that the `AuthHeaderHandler` is working and that the secret from Key Vault was injected properly.
