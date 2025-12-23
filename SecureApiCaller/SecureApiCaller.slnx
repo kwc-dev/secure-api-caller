@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SecureApiCaller.Tests/SecureApiCaller.Tests.csproj" Id="c2934f5b-dfb5-40bd-b101-b5ee88b62f27" />
+  <Project Path="SecureApiCaller/SecureApiCaller.csproj" />
+</Solution>
