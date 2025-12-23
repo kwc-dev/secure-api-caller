@@ -45,8 +45,8 @@ This project serves as a reference implementation for building cloud‑ready, se
 ```
 dotnet run
 ```
-2. Call the test endpoint (check the port number):
+2. Call the test endpoint:
 ```
-GET https://localhost:5001/call-webhook
+GET https://localhost:7140/call-webhook
 ```
 3. Check webhook.site to see the incoming request.
